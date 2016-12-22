@@ -1,5 +1,125 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{banking}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{green}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\usepackage{enumitem}
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Hope}{Johnson}
+\title{Curriculum Vit\ae}                               % optional, remove / comment the line if not wanted
+\address{1465 St. Clair Avenue }{St. Paul, MN 55105}
+\mobile{(206) 909.7183}
+\email{hjohns12@macalester.edu}
+\homepage {goo.gl/dLKVNv}                        % optional, remove / comment the line if not wanted
+\extrainfo{ Born: Santa Rosa, CA (U.S. Citizen)}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
 \begin{document}
-(Type your content here.)
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\cventry{2013--2017}{B.A.}{Macalester College}{St. Paul, MN}{\textit{Statistics, Economics}}
+{\begin{itemize}[label=\textbullet]
+  \item Statistics Honors Thesis: "Body-Worn Cameras and Race in Officer-Involved Shootings"
+  \item Economics Capstone: "Natural Disasters and Mobile Banking Adoption in 55 Developing Countries"
+\end{itemize}
+}
+
+\section{Independent Research}
+%\subsection{Vocational}
+\cventry{2016 -- present}{Statistics Honors Thesis}{\textnormal{Body-Worn Cameras and Race in Officer-Involved Shootings}}{}{}{}{
+\begin{itemize}
+\item Specify a zero-inflated negative binomial model to analyze the relationship between body-worn cameras and victim race in officer-involved shootings. 
+\end{itemize}}
+
+\cventry{Fall 2016}{Survival Analysis Term Paper}{\textnormal{Racial Difference in the Predictive Accuracy of a Recidivism Risk Assessment Instrument}}{}{}{}{
+\begin{itemize}
+\item Test if the COMPAS recidivism risk assessment tool predicts the risk of recidivism with equal accuracy across races.  
+\end{itemize}}
+
+\cventry{Spring 2016}{Econometrics Term Paper}{\textnormal{Heroin and Naloxone: Disentangling an Epidemic}}{}{}{}{
+\begin{itemize}
+\item Analyze the impact of making naloxone available to heroin users;
+\item Winner of the Minnesota Economics Association \textit{best term paper}.
+\end{itemize}}
+
+
+\section{Experience}
+\cventry{Dec. 2016--present}{Data Visualization Consultant}{Bill \& Melinda Gates Foundation}{Seattle, WA}{}{
+\begin{itemize}%
+\item Clean survey data from Kenyan households on health service access;
+\item Visualize gaps between health services and patient care using Tableau;
+\item Prepare visuals, analysis, and discussion for forthcoming articles in the Journal of Infectious Disease. 
+\end{itemize}}
+
+\cventry{June - Aug. 2016}{Data Science Research Analyst}{Educating Sustainability Ambassadors Initiative}{St. Paul, MN}{}{
+\begin{itemize}%
+\item Map farm-to-school programs and educational attainment gaps in Minnesota;
+\item Construct a linear mixed-effects model to describe the relationship between farm-to-school programs and student outcomes in Minnesota.
+\end{itemize}}
+
+\cventry{June - Aug. 2015}{Empirical Research Assistant}{Crossroads Resource Center}{Minneapolis, MN}{}{
+\begin{itemize}%
+\item Researched the economics of local food supply chains in St. Paul and Minneapolis. 
+\end{itemize}}
+
+\section{Programs and Languages}
+\cvitem{Advanced Proficiency}{R, STATA, Tableau, LaTex, Microsoft Office}
+\cvitem{Intermediate Proficiency}{Python, SAS, Java, C++}
+\cvitem{Basic Proficiency}{SQL, SPSS}
+
+\section{Awards, Grants, and Honors}
+\cventry{2016}{\textnormal{Term Paper Contest Winner (Minneapolis Federal Reserve)}}{}{}{}{}
+\cventry{2016}{\textnormal{Omicron Delta Epsilon Economics Honors Society Member}}{}{}{}{}
+\cventry{2013-14}{\textnormal{Dean’s List (Macalester College)}}{}{}{}{}
+\cventry{2013-2017}{\textnormal{DeWitt Wallace Distinguished Scholar}}{}{}{}{}
+
+\section{Presentations}
+\cventry{10/2016}{Graduate Research Opportunities for Women in Mathematics (GROW) Conference}{Northwestern University}{}{}{Summer Research during Undergrad}
+
+
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
 \end{document}
