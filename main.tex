@@ -7,40 +7,30 @@
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
-\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
-\usepackage{enumitem}
+\usepackage[utf8]{inputenc}                     
+\usepackage[shortlabels]{enumitem}
 
 % adjust the page margins
 \usepackage[scale=0.8]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
+
 % personal data
 \name{Hope}{Johnson}
-\title{Curriculum Vit\ae}                               % optional, remove / comment the line if not wanted
+\title{Curriculum Vit\ae}                          
 \address{35 Faneuil St., Unit 2}{Brighton, MA 02135}
 \mobile{(206) 909.7183}
 \email{hopecaneel@gmail.com}
-\homepage {goo.gl/dLKVNv}                        % optional, remove / comment the line if not wanted
-\extrainfo{ Born: Santa Rosa, CA (U.S. Citizen), 1995}                 % optional, remove / comment the line if not wanted
-%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\homepage {goo.gl/dLKVNv}       
 
 
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
 
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+
 
 
 \makecvtitle
@@ -56,7 +46,7 @@
 
 \section{Independent Research}
 %\subsection{Vocational}
-\cventry{Aug. 2016 -- present}{Statistics Honors Thesis}{\textbf{A Statistical Analysis of Body-Worn Cameras in Officer-Involved Shootings}}{}{}{}{
+\cventry{Aug. 2016 -- May 2017}{Statistics Honors Thesis}{\textbf{A Statistical Analysis of Body-Worn Cameras in Officer-Involved Shootings}}{}{}{}{
 \begin{itemize}
 \item Specify a zero-inflated negative binomial regression to analyze the relationship between body-worn cameras and victim race in officer-involved shootings. 
 \end{itemize}}
@@ -92,9 +82,10 @@
 \section{Experience}
 \cventry{Sept. 2017--present}{Junior Front-End Data Scientist}{Mathematica Policy Research}{Cambridge, MA}{}{
 \begin{itemize}%
-\item Conduct quantitative analysis to assess the impact of Medicaid programs on patient health outcomes and expenditures;
-\item Prepare graphs and tables for senior researchers;
-\item Manage and ensure the quality of large-scale health care datasets.
+\item Develop and implement statistical network analyses to evaluate a primary care delivery program;
+\item Perform Bayesian statistical analysis to assess the impact of Medicaid/Medicare intervention programs;
+\item Simulate correlated patient-level data for regression testing;
+\item Create polished data visualizations and dashboards using D3.js, Plotly (Julia), and ggplot (R).
 \end{itemize}}
 \bigskip 
 
@@ -116,19 +107,15 @@
 \begin{itemize}%
 \item Researched the economics of local food supply chains in St. Paul and Minneapolis. 
 \end{itemize}}
-\bigskip 
-\cventry{June - Aug. 2017}{Farm hand}{Threshing Table Farm}{Star Prairie, WI}{}{
-\begin{itemize}%
-\item Performed harvesting and farm maintenance tasks on a small vegetable farm.
-\end{itemize}}
 
 \section{Computer Skills}
-\cvitem{Advanced Proficiency}{R, Stata, Stan, LaTex, Microsoft Office}
-\cvitem{Intermediate Proficiency}{Python, JavaScript, Tableau}
-\cvitem{Basic Proficiency}{SQL}
+\cvitem{Advanced Proficiency}{R, Julia, Stan, LaTex, Git, Stata, Microsoft Office}
+\cvitem{Intermediate Proficiency}{Python, D3.js, Node.js, JavaScript, HTML, CSS, Processing, Tableau}
+\cvitem{Basic Proficiency}{SQL, SAS}
 
 \section{Awards, Grants, and Honors}
 \cventry{2017}{\textnormal{Recipient of the David Bressoud prize for excellent communication skills in mathematics}}{}{}{}{}
+\cventry{2017}{\textnormal{\href{http://eyeofestival.com/}{Eyeo Festival Student Grant}}}{}{}{}{}
 \cventry{2017}{\textnormal{1st place, undergraduate research paper contest winner (American Statistical Association)}}{}{}{}{}
 \cventry{2016}{\textnormal{3rd place, term paper contest winner (Minneapolis Federal Reserve)}}{}{}{}{}
 \cventry{2016}{\textnormal{Educating Sustainability Ambassador (Howard Hughes Medical Institute/Macalester College)}}{}{}{}{}
@@ -136,8 +123,11 @@
 \cventry{2013-14}{\textnormal{Dean’s List (Macalester College)}}{}{}{}{}
 \cventry{2013-2017}{\textnormal{DeWitt Wallace Distinguished Scholar}}{}{}{}{}
 
-\section{Presentations}
-\cventry{April 2017}{Honors Defense}{Macalester College}{}{}{``A Statistical Analysis of Body-Worn Cameras in Officer-Involved Shootings''}
+\section{Presentations and Conferences}
+\cventry{April 2018}{Illuminating Space and Time in Data Science}{Harvard University Center for Geographic Analysis}{}{}{``Spatio-temporal Network Analysis''}
+\bigskip
+
+\cventry{April 2017}{Honors Defense - Department of Applied Mathematics}{Macalester College}{}{}{``A Statistical Analysis of Body-Worn Cameras in Officer-Involved Shootings''}
 \bigskip
 \cventry{Oct. 2016}{Graduate Research Opportunities for Women in Mathematics (GROW) Conference}{Northwestern University}{}{}{``Summer Research as an Undergraduate''}
 
@@ -152,20 +142,6 @@
 
 
 
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
 
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
 
 \end{document}
